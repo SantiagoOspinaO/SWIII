@@ -2,10 +2,12 @@ package co.com.swiii.registrotemperatura.model;
 
 import co.com.swiii.registrotemperatura.model.exception.BusinessException;
 import co.com.swiii.registrotemperatura.util.Validator;
+import lombok.Data;
 
 import java.util.Date;
 import java.util.List;
 
+@Data
 public class Empleado {
 
     public static final String ID_REQUERIDO = "El Id es requerido";
@@ -23,7 +25,6 @@ public class Empleado {
     }
 
     public static class EmpleadoBuilder {
-
 
         private Long id;
         private String nombre;
@@ -62,37 +63,4 @@ public class Empleado {
         }
     }
 
-
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public Date getFechaNacimiento() {
-        return fechaNacimiento;
-    }
-
-    public void setFechaNacimiento(Date fechaNacimiento) {
-        this.fechaNacimiento = fechaNacimiento;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public List<HistoricoTemperatura> getHistoricoTemperaturas() {
-        return historicoTemperaturas;
-    }
-
-    public void setHistoricoTemperaturas(List<HistoricoTemperatura> historicoTemperaturas) {
-        this.historicoTemperaturas = historicoTemperaturas;
-    }
 }
