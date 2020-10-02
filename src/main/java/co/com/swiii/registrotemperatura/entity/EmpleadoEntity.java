@@ -24,35 +24,4 @@ public class EmpleadoEntity {
     @Column(name="temperatura")
     private double temperatura;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public Date getEdad() {
-        return edad;
-    }
-
-    public void setEdad(Date edad) {
-        this.edad = edad;
-    }
-
-    public double getTemperatura() {
-        return temperatura;
-    }
-
-    public void setTemperatura(double temperatura) {
-        this.temperatura = temperatura;
-    }
 }

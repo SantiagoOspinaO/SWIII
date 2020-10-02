@@ -19,7 +19,6 @@ public class Empleado {
     private Date fechaNacimiento;
     private List<HistoricoTemperatura> historicoTemperaturas;
 
-
     public Empleado(){
         super();
     }
@@ -62,5 +61,4 @@ public class Empleado {
             return empleado;
         }
     }
-
 }

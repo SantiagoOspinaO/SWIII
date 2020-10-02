@@ -33,27 +33,4 @@ public class HistoricoTemperaturaEntity {
         this.idHistoricoTemperatura = idHistoricoTemperatura;
     }
 
-    public Date getFechaMuestreo() {
-        return fechaMuestreo;
-    }
-
-    public void setFechaMuestreo(Date fechaMuestreo) {
-        this.fechaMuestreo = fechaMuestreo;
-    }
-
-    public double getTemperatura() {
-        return temperatura;
-    }
-
-    public void setTemperatura(double temperatura) {
-        this.temperatura = temperatura;
-    }
-
-    public Empleado getEmpleado() {
-        return empleado;
-    }
-
-    public void setEmpleado(Empleado empleado) {
-        this.empleado = empleado;
-    }
 }
