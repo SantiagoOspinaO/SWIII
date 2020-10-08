@@ -33,9 +33,7 @@ public class EmpleadoConverter {
 
     public List<Empleado> entityToModel(List<EmpleadoEntity> empleadosEntity){
         List<Empleado> empleados = new ArrayList<>(empleadosEntity.size());
-        empleadosEntity.forEach(entity -> {
-            empleados.add(entityToModel(entity));
-        });
+        empleadosEntity.forEach(entity -> empleados.add(entityToModel(entity)));
         return empleados;
     }
 
