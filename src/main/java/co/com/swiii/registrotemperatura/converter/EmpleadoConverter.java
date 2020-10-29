@@ -11,7 +11,7 @@ import java.util.Optional;
 @Component
 public class EmpleadoConverter {
 
-    public Empleado entityToModel(EmpleadoEntity empleadoEntity){
+    public Empleado entityToModel(EmpleadoEntity empleadoEntity) {
 
         var empleado = new Empleado();
         empleado.setId(empleadoEntity.getId());
@@ -21,7 +21,7 @@ public class EmpleadoConverter {
         return empleado;
     }
 
-    public EmpleadoEntity modelToEntity(Empleado empleado){
+    public EmpleadoEntity modelToEntity(Empleado empleado) {
 
         var empleadoEntity = new EmpleadoEntity();
         empleadoEntity.setId(empleado.getId());
@@ -31,15 +31,15 @@ public class EmpleadoConverter {
         return empleadoEntity;
     }
 
-    public List<Empleado> entityToModel(List<EmpleadoEntity> empleadosEntity){
+    public List<Empleado> entityToModel(List<EmpleadoEntity> empleadosEntity) {
         List<Empleado> empleados = new ArrayList<>(empleadosEntity.size());
         empleadosEntity.forEach(entity -> empleados.add(entityToModel(entity)));
         return empleados;
     }
 
-    public Empleado entityToModel(Optional<EmpleadoEntity> empleadoEntity){
+    public Empleado entityToModel(Optional<EmpleadoEntity> empleadoEntity) {
         Empleado empleado = null;
-        if(empleadoEntity.isPresent()){
+        if (empleadoEntity.isPresent()) {
             empleado = new Empleado();
             empleado.setId(empleadoEntity.get().getId());
             empleado.setNombre(empleadoEntity.get().getNombre());

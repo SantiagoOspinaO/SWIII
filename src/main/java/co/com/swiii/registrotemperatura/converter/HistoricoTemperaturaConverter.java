@@ -11,7 +11,7 @@ import java.util.Optional;
 @Component
 public class HistoricoTemperaturaConverter {
 
-    public HistoricoTemperatura entityToModel(HistoricoTemperaturaEntity historicoTemperaturaEntity){
+    public HistoricoTemperatura entityToModel(HistoricoTemperaturaEntity historicoTemperaturaEntity) {
 
         var historicotemperatura = new HistoricoTemperatura();
         historicotemperatura.setIdHistoricoTemperatura(historicoTemperaturaEntity.getIdHistoricoTemperatura());
@@ -21,7 +21,7 @@ public class HistoricoTemperaturaConverter {
         return historicotemperatura;
     }
 
-    public HistoricoTemperaturaEntity modelToEntity(HistoricoTemperatura historicoTemperatura){
+    public HistoricoTemperaturaEntity modelToEntity(HistoricoTemperatura historicoTemperatura) {
 
         var historicoTemperaturaEntity = new HistoricoTemperaturaEntity();
         historicoTemperaturaEntity.setIdHistoricoTemperatura(historicoTemperatura.getIdHistoricoTemperatura());
@@ -32,7 +32,7 @@ public class HistoricoTemperaturaConverter {
         return historicoTemperaturaEntity;
     }
 
-    public List<HistoricoTemperatura> entityToModel(List<HistoricoTemperaturaEntity> historicoTemperaturasEntities){
+    public List<HistoricoTemperatura> entityToModel(List<HistoricoTemperaturaEntity> historicoTemperaturasEntities) {
 
         List<HistoricoTemperatura> historicoTemperaturas = new ArrayList<>(historicoTemperaturasEntities.size());
         historicoTemperaturasEntities.forEach(entity -> {
@@ -41,9 +41,9 @@ public class HistoricoTemperaturaConverter {
         return historicoTemperaturas;
     }
 
-    public HistoricoTemperatura entityToModel(Optional<HistoricoTemperaturaEntity> historicoTemperaturaEntity){
+    public HistoricoTemperatura entityToModel(Optional<HistoricoTemperaturaEntity> historicoTemperaturaEntity) {
         HistoricoTemperatura historicoTemperatura = null;
-        if (historicoTemperaturaEntity.isPresent()){
+        if (historicoTemperaturaEntity.isPresent()) {
             historicoTemperatura = new HistoricoTemperatura();
             historicoTemperatura.setIdHistoricoTemperatura(historicoTemperaturaEntity.get().getIdHistoricoTemperatura());
             historicoTemperatura.setFechaMuestreo(historicoTemperaturaEntity.get().getFechaMuestreo());

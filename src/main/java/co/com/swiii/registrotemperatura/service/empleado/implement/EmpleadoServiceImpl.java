@@ -1,5 +1,6 @@
 package co.com.swiii.registrotemperatura.service.empleado.implement;
 
+import co.com.swiii.registrotemperatura.command.EmpleadoCommand;
 import co.com.swiii.registrotemperatura.converter.EmpleadoConverter;
 import co.com.swiii.registrotemperatura.model.Empleado;
 import co.com.swiii.registrotemperatura.repository.EmpleadoRepository;
@@ -34,7 +35,8 @@ public class EmpleadoServiceImpl implements EmpleadoService {
     }
 
     @Override
-    public List<Empleado> findAll() {
-        return empleadoConverter.entityToModel(empleadoRepository.findAll());
+    public List<EmpleadoCommand> findAll() {
+        empleadoConverter.entityToModel(empleadoRepository.findAll());
+        return null;
     }
 }

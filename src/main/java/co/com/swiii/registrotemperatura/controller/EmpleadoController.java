@@ -1,5 +1,6 @@
 package co.com.swiii.registrotemperatura.controller;
 
+import co.com.swiii.registrotemperatura.command.EmpleadoCommand;
 import co.com.swiii.registrotemperatura.converter.EmpleadoConverter;
 import co.com.swiii.registrotemperatura.entity.EmpleadoEntity;
 import co.com.swiii.registrotemperatura.model.Empleado;
@@ -19,27 +20,27 @@ public class EmpleadoController {
     EmpleadoConverter empleadoConverter;
 
     @PostMapping("/empleado")
-    public void save(@RequestBody Empleado empleado){
+    public void save(@RequestBody Empleado empleado) {
         empleadoService.save(empleado);
     }
 
     @GetMapping("/{id}/empleado")
-    public Empleado findByID(@PathVariable(value = "id", required = true) Long id){
+    public Empleado findByID(@PathVariable(value = "id", required = true) Long id) {
         return empleadoService.findById(id);
     }
 
     @DeleteMapping("/{id}/empleado")
-    public void deleteById(@PathVariable(value = "id", required = true) Long id){
+    public void deleteById(@PathVariable(value = "id", required = true) Long id) {
         empleadoService.deleteById(id);
     }
 
     @GetMapping("/empleado")
-    public List<Empleado> findAll(){
+    public List<EmpleadoCommand> findAll() {
         return empleadoService.findAll();
     }
 
     @PutMapping("/{id}/empleado")
-    public void update(@RequestBody EmpleadoEntity empleadoEntity, @PathVariable(value = "id", required = true) Long id){
+    public void update(@RequestBody EmpleadoEntity empleadoEntity, @PathVariable(value = "id", required = true) Long id) {
         empleadoEntity.setId(id);
         empleadoService.save(empleadoConverter.entityToModel(empleadoEntity));
     }

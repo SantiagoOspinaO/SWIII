@@ -1,8 +1,8 @@
 package co.com.swiii.registrotemperatura.controller;
 
-import co.com.swiii.registrotemperatura.converter.EmpleadoConverter;
-import co.com.swiii.registrotemperatura.model.Empleado;
-import co.com.swiii.registrotemperatura.service.empleado.EmpleadoService;
+import co.com.swiii.registrotemperatura.converter.HistoricoTemperaturaConverter;
+import co.com.swiii.registrotemperatura.model.HistoricoTemperatura;
+import co.com.swiii.registrotemperatura.service.historicotemperatura.HistoricoTemperaturaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,27 +13,27 @@ import java.util.List;
 public class HistoricoTemperaturaController {
 
     @Autowired
-    EmpleadoService empleadoService;
+    HistoricoTemperaturaService historicoTemperaturaService;
     @Autowired
-    EmpleadoConverter empleadoConverter;
+    HistoricoTemperaturaConverter historicoTemperaturaConverter;
 
-    @PostMapping("/empleado")
-    public void save(@RequestBody Empleado empleado){
-        empleadoService.save(empleado);
+    @PostMapping("/historicotemperatura")
+    public void save(@RequestBody HistoricoTemperatura historicoTemperatura) {
+        historicoTemperaturaService.save(historicoTemperatura);
     }
 
-    @GetMapping("/{id}/empleado")
-    public Empleado findByID(@PathVariable(value = "id", required = true) Long id){
-        return empleadoService.findById(id);
+    @GetMapping("/{id}/historicotemperatura")
+    public HistoricoTemperatura findByID(@PathVariable(value = "id", required = true) Long id) {
+        return historicoTemperaturaService.findById(id);
     }
 
-    @GetMapping("/empleado")
-    public List<Empleado> findAll(){
-        return empleadoService.findAll();
+    @GetMapping("/historicotemperatura")
+    public List<HistoricoTemperatura> findAll() {
+        return historicoTemperaturaService.findAll();
     }
 
     @DeleteMapping("/{id}/empleado")
-    public void deleteById(@PathVariable(value = "id", required = true) Long id){
-        empleadoService.deleteById(id);
+    public void deleteById(@PathVariable(value = "id", required = true) Long id) {
+        historicoTemperaturaService.deleteById(id);
     }
 }

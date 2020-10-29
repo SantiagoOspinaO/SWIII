@@ -7,21 +7,21 @@ import java.util.Date;
 
 @Data
 @Entity
-@Table(name= "empleado")
+@Table(name = "empleado")
 public class EmpleadoEntity {
 
     @Id
     @GeneratedValue
-    @Column(name="id")
+    @Column(name = "id")
     private Long id;
 
-    @Column(name="nombre")
+    @Column(name = "nombre")
     private String nombre;
 
-    @Column(name="edad")
+    @Column(name = "edad")
     private Date edad;
 
-    @Column(name="temperatura")
+    @Column(name = "temperatura")
     private double temperatura;
 
 }

@@ -19,7 +19,7 @@ public class Empleado {
     private Date fechaNacimiento;
     private List<HistoricoTemperatura> historicoTemperaturas;
 
-    public Empleado(){
+    public Empleado() {
         super();
     }
 

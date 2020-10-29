@@ -14,11 +14,11 @@ public class HistoricoTemperatura {
     private double temperatura;
     private Empleado empleado;
 
-    public HistoricoTemperatura(){
+    public HistoricoTemperatura() {
         super();
     }
 
-    public static class HistoricoTemperaturaBuilder{
+    public static class HistoricoTemperaturaBuilder {
 
         private Date fechaMuestreo;
         private Long idHistoricoTemperatura;
@@ -69,6 +69,7 @@ public class HistoricoTemperatura {
     public void setIdHistoricoTemperatura(Long idHistoricoTemperatura) {
         this.idHistoricoTemperatura = idHistoricoTemperatura;
     }
+
     public double getTemperatura() {
         return temperatura;
     }
