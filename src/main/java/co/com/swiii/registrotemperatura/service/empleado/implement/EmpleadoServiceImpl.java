@@ -35,8 +35,7 @@ public class EmpleadoServiceImpl implements EmpleadoService {
     }
 
     @Override
-    public List<EmpleadoCommand> findAll() {
-        empleadoConverter.entityToModel(empleadoRepository.findAll());
-        return null;
+    public List<Empleado> findAll() {
+        return empleadoConverter.entityToModel(empleadoRepository.findAll());
     }
 }

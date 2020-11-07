@@ -13,5 +13,5 @@ public interface EmpleadoService {
 
     void deleteById(Long id);
 
-    List<EmpleadoCommand> findAll();
+    List<Empleado> findAll();
 }
